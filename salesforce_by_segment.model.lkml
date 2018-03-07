@@ -1,4 +1,4 @@
-connection: "segment_sources"
+connection: "redshift"
 
 # include base (generated) views
 include: "sfbase__*.view"

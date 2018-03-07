@@ -1,5 +1,5 @@
 view: sfbase__leads {
-  sql_table_name: salesforce.leads ;;
+  sql_table_name: salesforce.lead ;;
 
   dimension: id {
     primary_key: yes
@@ -39,7 +39,7 @@ view: sfbase__leads {
   dimension_group: created {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.created_date ;;
+    sql: ${TABLE}.createddate ;;
   }
 
   dimension: external_id_c {
@@ -54,7 +54,7 @@ view: sfbase__leads {
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.is_deleted ;;
+    sql: ${TABLE}.isdeleted ;;
   }
 
   dimension_group: last_activity {

@@ -1,5 +1,5 @@
 view: sfbase__accounts {
-  sql_table_name: salesforce.accounts ;;
+  sql_table_name: salesforce.account ;;
 
   dimension: id {
     primary_key: yes
@@ -25,7 +25,7 @@ view: sfbase__accounts {
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.is_deleted ;;
+    sql: ${TABLE}.isdeleted ;;
   }
 
   dimension: last_modified_by_id {

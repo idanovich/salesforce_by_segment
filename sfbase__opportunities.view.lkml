@@ -1,5 +1,5 @@
 view: sfbase__opportunities {
-  sql_table_name: salesforce.opportunities ;;
+  sql_table_name: salesforce.opportunity ;;
 
   dimension: id {
     primary_key: yes
@@ -16,7 +16,7 @@ view: sfbase__opportunities {
   dimension_group: close {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.close_date ;;
+    sql: ${TABLE}.closedate ;;
   }
 
   dimension: created_by_id {
@@ -43,12 +43,12 @@ view: sfbase__opportunities {
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.is_deleted ;;
+    sql: ${TABLE}.isdeleted ;;
   }
 
   dimension: is_won {
     type: yesno
-    sql: ${TABLE}.is_won ;;
+    sql: ${TABLE}.iswon ;;
   }
 
   dimension_group: last_activity {
@@ -84,7 +84,7 @@ view: sfbase__opportunities {
   dimension: owner_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.owner_id ;;
+    sql: ${TABLE}.ownerid ;;
   }
 
   dimension: plan_c {
@@ -100,12 +100,12 @@ view: sfbase__opportunities {
 
   dimension: stage_name {
     type: string
-    sql: ${TABLE}.stage_name ;;
+    sql: ${TABLE}.stagename ;;
   }
 
   dimension: total_value_c {
     type: number
-    sql: ${TABLE}.total_value_c ;;
+    sql: ${TABLE}.total_opportunity__c ;;
   }
 
   dimension: upsell_c {
